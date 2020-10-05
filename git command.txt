@@ -1,0 +1,117 @@
+1-git clone 'url from github' : to clone my repo in my local 
+
+2-git add  'file :file that i want to add in the stage area from working directory  before the commit'
+
+3-git reset HEAD 'file' : file the i want to undo the git add (i want to remove from the stage area)
+
+4-git status  : return the status of file ( untracked or putted on the stage area before commit)
+
+         WORKING DIRECTORY ==>STAGING AREA ==> LOCAL REPOSETRIE ==> REMOTE REPOSETRIE
+
+
+5-git config --global user.email "dhiarahli@gmail" : to configure my account before commiting 
+
+
+6-git commit -m "discription "  : commiting the changes to local repo 
+
+7-git branch  : give branch name on which i'm working 
+
+8-git remote -v : give the branch remote name  (master)
+
+9-git push  : push commited file to remote repo (remote repo : origin)
+
+--------------------------------------------------------------------------------------
+
+10-git pull origin : pull the changes made on the remote repo (origin) to the local repo ; it make to command git fetch to find the changes and git merge to merges thoses changes in my local repo . 
+
+--------------------------------------------------------------------------------------------
+
+
+11-git config --global user.name  : get or set configuration (here the config is user name)
+
+12- git config --global -l  : list all configuration 
+
+13-git config --global --unset user.email : remove user.name or any other options from configuration
+
+14-$ git config --global --edit : open configuration editor
+
+15-git config --global core.editor "code --wait" : open configuaration in visual studio code
+
+
+-------------------------------------------------------------------------------
+
+
+
+16-ssh-keygen -t rsa -b 4096 -C "dhiarahli@gmail.com" : creating ssh key for the connection with github  : for more details see favoris 
+
+
+-------------------------------------------------------------------------------
+
+
+
+
+
+ ************create a new repository on the command line ************
+ Go To The Disered Document into my computer then: 
+1 git init 
+2 git add README.md
+3 git commit -m "first commit"
+4 git branch -M master
+5 git remote add origin git@github.com:Dhia-Rahali/hi-.git
+6 git push -u origin master
+
+
+
+
+
+
+
+-----------------------------------------------------------
+
+Branching And Merging
+
+17-git branch : give the name of the actual branch 
+
+18-git branch NEW branch Name : make a new branch called NEW branch Name
+
+19-git  checkout  New Branch : move to the new branch  
+
+20-git branch -d branch deleted : delet the branch called branch deleted ( to delet a branch you should first exit from this branch with thi command : git  checkout  New Branch )
+
+21-git checkout -b Dev-Feature : creat new branch (Dev-Feature) abd move to it
+
+22-git branch -m Developpement : rename the current branch to Developpment
+
+******
+
+First method : creating ne branch -> make the change in the new branch => Exit fro mthe new branch to the master => merge the new branch => push origin master
+ 
+after add and commiting changement to our current branch (Developpment) we hould now merge in into our master branch :
+
+* git checkout master : return to the master branch for merging (we are now in the master branh )
+
+* git merge Developpement : merge the content of Developpement in master deciding to push it into origin 
+
+*git push oringin master : push the changement to th github server (origin)
+
+
+Second  method : creating new branch -> make the change in the new branch => DON't Exit fro mthe new branch =>  push origin New Branch 
+
+
+ after add and commiting changement to our current branch (Developpment) we hould now merge in into our master branch  by sending a pull request to origin :
+
+* git checkout Developpement : stay in the new branch to send a pull request 
+
+* git push oringin Developpement : this command will send a pull request to the origin ( login github and compare then confirm pull request )
+
+
+
+
+
+
+
+
+
+
+
+
